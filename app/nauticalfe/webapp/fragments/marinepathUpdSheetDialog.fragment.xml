@@ -1,0 +1,55 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog
+        id="previewDialog"
+        title="Preview Data"
+        stretch="true"
+        verticalScrolling="true"
+        contentWidth="auto"
+        contentHeight="auto"
+        beginButton="{closeButton}">
+ 
+        <!-- Table -->
+        <Table id="previewTable" mode="MultiSelect" showSeparators="All">
+            <!-- Columns -->
+            <columns >
+                <Column width="120px" hAlign="Begin" vAlign="Middle" >
+                    <Label text="Start Port"/>
+                </Column>
+                <Column width="120px" hAlign="Begin" vAlign="Middle">
+                    <Label text="End Port"/>
+                </Column>
+                <Column width="120px" hAlign="Begin" vAlign="Middle">
+                    <Label text="Route ID"/>
+                </Column>
+                <Column width="120px" hAlign="Begin" vAlign="Middle">
+                    <Label text="Location ID"/>
+                </Column>
+                <Column width="120px" hAlign="Begin" vAlign="Middle">
+                    <Label text="Latitude"/>
+                </Column>
+                <Column width="120px" hAlign="Begin" vAlign="Middle">
+                    <Label text="Longitude"/>
+                </Column>
+                
+            </columns>
+            <!-- Items -->
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{StartPort}"/>
+                        <Text text="{EndPort}"/>
+                        <Text text="{RouteID}"/>
+                        <Text text="{LocationID}"/>
+                        <Text text="{Latitude}"/>
+                        <Text text="{Longitude}"/>
+                        
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <beginButton>
+            <Button press="onPreviewDialogClose" text="Close"  type="Back"></Button>
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>
+ 
