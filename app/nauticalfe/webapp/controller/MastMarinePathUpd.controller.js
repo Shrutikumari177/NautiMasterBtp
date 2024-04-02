@@ -17,8 +17,12 @@ sap.ui.define(
         
         onBackPress: function () {
           const oRouter = this.getOwnerComponent().getRouter();
+          const oFileUploader = this.getView().byId("fileUploader");
+          oFileUploader.clear();
           oRouter.navTo("RouteMasterDashboard");
-        },
+         
+        
+      },
         onPressHome: function () {
           const oRouter = this.getOwnerComponent().getRouter();
           oRouter.navTo("RouteHome");
