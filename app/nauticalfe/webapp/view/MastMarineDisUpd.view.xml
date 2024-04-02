@@ -1,74 +1,75 @@
-<mvc:View xmlns:cards="sap.f.cards" controllerName="nauticalfe.controller.MastMarineDisUpd"
-xmlns:html="http://www.w3.org/1999/xhtml"
-xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:core="sap.ui.core"
-xmlns="sap.m" xmlns:tnt="sap.tnt">
-    <Page id="_IDGenPage1" >
-        <headerContent>
-        <!-- Your header content goes here -->
-        <Bar id="_IDGenBar2" class="customHeader">
-            <contentLeft>
-                <core:Icon id="_IDGenIcon1"
-                    src="sap-icon://nav-back"
-                    class="size1"
-                    color="#FFFFFF"
-                    press="onBackPress"
-                />
-                <core:Icon id="_IDGenIcon2"
-                    src="sap-icon://home"
-                    class="size1"
-                    color="#FFFFFF"
-                    press="onBackPressHome"
-                />
-                <Image id="_IDGenImage1"
-                     class="size1"
-                    src="./images/ignxlogo.png"
-                    height="75%"
-                />
-                <Text id="_IDGenText1"
-                    class="textBid size1"
-                    text="Upload Program for Dummy Latitude and Longitude for Val"
-                />
-            </contentLeft>
-            <contentRight>
-                <core:Icon id="_IDGenIcon3"
-                    src="sap-icon://search"
-                    class="size1"
-                    color="#FFFFFF"
-                >
-                    <core:layoutData>
-                        <FlexItemData id="_IDGenFlexItemData1" growFactor="1" />
-                    </core:layoutData>
-                </core:Icon>
-                <core:Icon id="_IDGenIcon4"
-                    src="sap-icon://SAP-icons-TNT/user"
-                    class="size1"
-                    color="#FFFFFF"
-                >
-                    <core:layoutData>
-                        <FlexItemData id="_IDGenFlexItemData2" growFactor="1" />
-                    </core:layoutData>
-                </core:Icon>
-            </contentRight>
+<mvc:View xmlns:form="sap.ui.layout.form"
+    xmlns:table="sap.ui.table"
+    xmlns:cards="sap.f.cards"
+    controllerName="nauticalfe.controller.MastMarineDisUpd"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns:unified="sap.ui.unified"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+>
+    <Page id="page">
+       <headerContent>
+            <Bar id="_IDGenBar2">
+                <contentLeft>
+                    <core:Icon id="_IDGenIcon1"
+                        src="sap-icon://nav-back"
+                        press="onBackPress"
+                    />
+                    <core:Icon id="_IDGenIcon2"
+                        src="sap-icon://home"
+                        press="onPressHome"
+                    />
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Port Location Upload"
+                    />
+                </contentLeft>
+               
             </Bar>
         </headerContent>
-
-        <Bar id="_IDGenBar1" class="_IDGenBar1">
+        <Bar
+            id="_IDGenBar1"
+            class="_IDGenBar1"
+        >
             <contentLeft>
-                <Button id="_IDGenButton1" text="Save as Variant"></Button>
-                <Button id="_IDGenButton2" text="Download as Template"></Button>
-                <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" press="onPress" ariaHasPopup="Menu"/>
+                
+                <Button
+                    id="_IDGenButton2"
+                    text="Download as Template"
+                    press="onDownloadPress"
+                />
+                
             </contentLeft>
-            <contentRight>
-                <Button id="_IDGenButton4" text="Exit" press="onExit"></Button>
-            </contentRight>
+           
         </Bar>
-        <HBox id="_IDGenHBox1" alignItems="Center" class="masterFileUpload">
-            <Label id="_IDGenLabel1" text="File Name:"></Label>
-            <Input id="_IDGenInput1" width="450px"></Input>
-            <Button id="_IDGenButton3" icon="sap-icon://copy" press="fileupload"></Button>
+        
+        <HBox  class="upload">
+        
+           <Label text="File Name :" class="uploadlabel"/>
+            <unified:FileUploader
+                id="fileUploader"
+                uploadUrl="/"
+                buttonText="Choose File"
+                fileType="xlsx"
+                uploadComplete="onUploadComplete"
+                change="onFileChange"
+               class="uploadInput"
+            />
+            <Button
+                text="Upload"
+                press="onUploadPress"
+            />
+            <Button
+                text="Preview"
+                press="onPreviewPress"
+            />
         </HBox>
-        <HBox id="_IDGenHBox2" class="masteroptionsfooter">
-            <Button id="_IDGenButton5" text="Execute" class="masterbuttonsalign"></Button>
-        </HBox>
+ 
+        
     </Page>
 </mvc:View>
+ 
