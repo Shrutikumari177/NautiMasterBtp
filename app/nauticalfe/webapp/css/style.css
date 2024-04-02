@@ -57,10 +57,11 @@
  .bar{
     position: fixed;
  }
+ .upload{
+    margin-left: 30%;
+    margin-top: 5%;
+ }
  
-/* .formPanel{
-    justify-content: space-around;
-} */
 
 
 /************************************ For Home Screen **********************************************/

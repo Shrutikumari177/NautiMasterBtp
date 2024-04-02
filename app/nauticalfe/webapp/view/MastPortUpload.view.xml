@@ -12,51 +12,23 @@
 >
     <Page id="page">
         <headerContent>
-            <!-- Your header content goes here -->
-            <Bar class="customHeader">
+            <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon1"
                         src="sap-icon://nav-back"
-                        class="size1"
-                        color="#FFFFFF"
                         press="onBackPress"
                     />
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
-                        class="size1"
-                        color="#FFFFFF"
                         press="onBackPressHome"
                     />
-                    <Image
-                        class="size1"
-                        src="./images/ignxlogo.png"
-                        height="75%"
-                    />
-                    <Text
-                        class="textBid size1"
-                        text="Upload Program of Port"
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Port Upload"
                     />
                 </contentLeft>
-                <contentRight>
-                    <core:Icon
-                        src="sap-icon://search"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData growFactor="1" />
-                        </core:layoutData>
-                    </core:Icon>
-                    <core:Icon
-                        src="sap-icon://SAP-icons-TNT/user"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData growFactor="1" />
-                        </core:layoutData>
-                    </core:Icon>
-                </contentRight>
+               
             </Bar>
         </headerContent>
         <Bar
@@ -86,7 +58,7 @@
            
         </Bar>
  
-        <HBox alignContent="Stretch">
+        <HBox alignContent="Stretch" class="upload">
             <unified:FileUploader
                 id="fileUploader"
                 uploadUrl="/"
@@ -105,16 +77,7 @@
             />
         </HBox>
  
-        <footer>
-            <OverflowToolbar design="Solid">
-                <ToolbarSpacer />
-                <Button
-                    text="Execute"
-                    type="Negative"
-                    icon="none"
-                />
-            </OverflowToolbar>
-        </footer>
+        
     </Page>
 </mvc:View>
  

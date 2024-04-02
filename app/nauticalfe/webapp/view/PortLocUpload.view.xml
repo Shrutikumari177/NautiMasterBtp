@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:form="sap.ui.layout.form"
     xmlns:table="sap.ui.table"
     xmlns:cards="sap.f.cards"
     controllerName="nauticalfe.controller.PortLocUpload"
@@ -11,52 +11,24 @@
     xmlns:tnt="sap.tnt"
 >
     <Page id="page">
-        <headerContent>
-            <!-- Your header content goes here -->
-            <Bar class="customHeader">
+       <headerContent>
+            <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon1"
                         src="sap-icon://nav-back"
-                        class="size1"
-                        color="#FFFFFF"
                         press="onBackPress"
                     />
-                    <core:Icon
+                    <core:Icon id="_IDGenIcon2"
                         src="sap-icon://home"
-                        class="size1"
-                        color="#FFFFFF"
-                        press="onBackPressHome"
+                        press="onPressHome"
                     />
-                    <Image
-                        class="size1"
-                        src="./images/ignxlogo.png"
-                        height="75%"
-                    />
-                    <Text
-                        class="textBid size1"
-                        text="Upload Program of Port"
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Port Location Upload"
                     />
                 </contentLeft>
-                <contentRight>
-                    <core:Icon
-                        src="sap-icon://search"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData growFactor="1" />
-                        </core:layoutData>
-                    </core:Icon>
-                    <core:Icon
-                        src="sap-icon://SAP-icons-TNT/user"
-                        class="size1"
-                        color="#FFFFFF"
-                    >
-                        <core:layoutData>
-                            <FlexItemData growFactor="1" />
-                        </core:layoutData>
-                    </core:Icon>
-                </contentRight>
+               
             </Bar>
         </headerContent>
         <Bar
@@ -64,29 +36,20 @@
             class="_IDGenBar1"
         >
             <contentLeft>
-                <!-- <Button
-                    id="_IDGenButton1"
-                    text="Save as Variant"
-                    press="onSaveAs"
-                /> -->
+                
                 <Button
                     id="_IDGenButton2"
                     text="Download as Template"
                     press="onDownloadPress"
                 />
-                <!-- <Button
-                    id="button"
-                    icon="sap-icon://slim-arrow-down"
-                    iconFirst="false"
-                    text="More"
-                    press="onPress"
-                    ariaHasPopup="Menu"
-                /> -->
+                
             </contentLeft>
            
         </Bar>
- 
-        <HBox alignContent="Stretch">
+        
+        <HBox  class="upload">
+        
+           <Label text="File Name :" class="uploadlabel"/>
             <unified:FileUploader
                 id="fileUploader"
                 uploadUrl="/"
@@ -94,6 +57,7 @@
                 fileType="xlsx"
                 uploadComplete="onUploadComplete"
                 change="onFileChange"
+               class="uploadInput"
             />
             <Button
                 text="Upload"
@@ -105,16 +69,7 @@
             />
         </HBox>
  
-        <footer>
-            <OverflowToolbar design="Solid">
-                <ToolbarSpacer />
-                <Button
-                    text="Execute"
-                    type="Negative"
-                    icon="none"
-                />
-            </OverflowToolbar>
-        </footer>
+        
     </Page>
 </mvc:View>
  

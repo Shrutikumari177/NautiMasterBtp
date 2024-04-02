@@ -37,7 +37,7 @@ sap.ui.define(
         const oRouter = this.getOwnerComponent().getRouter();
         oRouter.navTo("RouteMasterDashboard");
       },
-      onBackPressHome: function () {
+      onPressHome: function () {
         const oRouter = this.getOwnerComponent().getRouter();
         oRouter.navTo("RouteHome");
       },

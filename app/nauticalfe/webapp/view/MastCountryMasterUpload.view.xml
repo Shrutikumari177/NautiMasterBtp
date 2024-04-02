@@ -1,77 +1,75 @@
-<mvc:View xmlns:cards="sap.f.cards" controllerName="nauticalfe.controller.MastCountryMasterUpload"
+<mvc:View xmlns:form="sap.ui.layout.form"
+    xmlns:table="sap.ui.table"
+    xmlns:cards="sap.f.cards"
+    controllerName="nauticalfe.controller.MastCountryMasterUpload"
     xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:core="sap.ui.core"
-    xmlns="sap.m" xmlns:tnt="sap.tnt">
-        <Page id="page">
-            <headerContent>
-                <!-- Your header content goes here -->
-                <Bar class="customHeader">
-                    <contentLeft>
-                        <core:Icon
-                            src="sap-icon://nav-back"
-                            class="size1"
-                            color="#FFFFFF"
-                            press="onBackPress"
-                        />
-                        <core:Icon
-                            src="sap-icon://home"
-                            class="size1"
-                            color="#FFFFFF"
-                            press="onBackPressHome"
-                        />
-                        <Image
-                             class="size1"
-                            src="./images/ignxlogo.png"
-                            height="75%"
-                        />
-                        <Text
-                            class="textBid size1"
-                            text="Country Master Upload Program"
-                        />
-                    </contentLeft>
-                    <contentRight>
-                        <core:Icon
-                            src="sap-icon://search"
-                            class="size1"
-                            color="#FFFFFF"
-                        >
-                            <core:layoutData>
-                                <FlexItemData growFactor="1" />
-                            </core:layoutData>
-                        </core:Icon>
-                        <core:Icon
-                            src="sap-icon://SAP-icons-TNT/user"
-                            class="size1"
-                            color="#FFFFFF"
-                        >
-                            <core:layoutData>
-                                <FlexItemData growFactor="1" />
-                            </core:layoutData>
-                        </core:Icon>
-                    </contentRight>
-                </Bar>
-            </headerContent>
-            <Bar id="_IDGenBar1" class="_IDGenBar1">
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns:unified="sap.ui.unified"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+>
+    <Page id="page">
+       <headerContent>
+            <Bar id="_IDGenBar2">
                 <contentLeft>
-                    <Button id="_IDGenButton1" text="Save as Variant" press="onSaveAs"></Button>
-                    <Button id="_IDGenButton2" text="Download as Template"  press="onDownloadPress"></Button>
-                    <Button id="button" icon="sap-icon://slim-arrow-down" iconFirst="false" text="More" press="onPress" ariaHasPopup="Menu"/>
+                    <core:Icon id="_IDGenIcon1"
+                        src="sap-icon://nav-back"
+                        press="onBackPress"
+                    />
+                    <core:Icon id="_IDGenIcon2"
+                        src="sap-icon://home"
+                        press="onPressHome"
+                    />
+                   
+                    <Text id="_IDGenText1"
+                        class="text1"
+                        text="Country Master Upload"
+                    />
                 </contentLeft>
-                <contentRight>
-                    <Button text="Exit" press="onExit"></Button>
-                </contentRight>
+               
             </Bar>
-            <HBox id="_IDGenHBox1" alignItems="Center" class="masterFileUpload">
-                <Label id="_IDGenLabel1" text="File Name:"></Label>
-                <Input id="_IDGenInput1" width="450px"></Input>
-                <Button id="_IDGenButton3" icon="sap-icon://copy" press="fileupload"></Button>
-            </HBox>
-           <footer>
-                <OverflowToolbar design="Auto">
-                <ToolbarSpacer />
-                <Button text="Save" ></Button>
-                <Button text="Cancel"  ></Button>
-                </OverflowToolbar>
-            </footer>
-        </Page>
+        </headerContent>
+        <Bar
+            id="_IDGenBar1"
+            class="_IDGenBar1"
+        >
+            <contentLeft>
+                
+                <Button
+                    id="_IDGenButton2"
+                    text="Download as Template"
+                    press="onDownloadPress"
+                />
+                
+            </contentLeft>
+           
+        </Bar>
+        
+        <HBox  class="upload">
+        
+           <Label text="File Name :" class="uploadlabel"/>
+            <unified:FileUploader
+                id="fileUploader"
+                uploadUrl="/"
+                buttonText="Choose File"
+                fileType="xlsx"
+                uploadComplete="onUploadComplete"
+                change="onFileChange"
+               class="uploadInput"
+            />
+            <Button
+                text="Upload"
+                press="onUploadPress"
+            />
+            <Button
+                text="Preview"
+                press="onPreviewPress"
+            />
+        </HBox>
+ 
+        
+    </Page>
 </mvc:View>
+ 

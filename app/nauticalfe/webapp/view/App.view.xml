@@ -1,19 +1,36 @@
+
 <mvc:View controllerName="nauticalfe.controller.App"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m"  xmlns:tnt="sap.tnt">
-    
-   <Page showHeader="false">
-    
-  
-    <App id="app" class="main_page">
-        
-    </App>
+    xmlns="sap.m"  xmlns:tnt="sap.tnt" >
+ 
+     <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <tnt:ToolHeader id="_IDGenToolHeader1" >
+                <Image id="_IDGenImage1" src="./images/ignxlogo.png" decorative="false" press="onLogoPressed" tooltip="Ingenx Logo" width="100px" height="30px"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" width="15px" />
+                <Title text="Nautical Ez Chartering Solution" wrapping="true" id="productName"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+            </tnt:ToolHeader>
+        </tnt:header>
+    <tnt:mainContents>
+       
    
-    <footer >
+   
+   <!-- <Page showHeader="false"> -->
+   
+   
+ 
+    <App id="app" class="main_page">
+       
+    </App>
+     </tnt:mainContents>
+    </tnt:ToolPage>
+   
+    <!-- <footer >
         <Bar class="footerBar">
             <contentLeft>
-                <Image id="IDGenImage1" 
+                <Image id="IDGenImage1"
                         width="50px"
                         src="./images/nautical.png"
                         height="auto" />
@@ -21,7 +38,7 @@
             </contentLeft>
         </Bar>
      
-    </footer>
-   </Page>
-    
+    </footer> -->
+   <!-- </Page> -->
+   
 </mvc:View>
