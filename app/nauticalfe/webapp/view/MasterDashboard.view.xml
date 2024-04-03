@@ -110,7 +110,7 @@ xmlns="sap.m" xmlns:tnt="sap.tnt">
                 <GenericTile id="GenGenericTile7" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
                     header="Route Master" press="onRouterMaster">
                     <TileContent >
-                    <ImageContent src="./images/route.png"></ImageContent>
+                     <core:Icon class="icon" src="sap-icon://BusinessSuiteInAppSymbols/icon-split-segmentation" />
                     </TileContent>
                 </GenericTile>
 
@@ -145,14 +145,14 @@ xmlns="sap.m" xmlns:tnt="sap.tnt">
                 <GenericTile id="GenGenericTile17" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
                     header="Country Master Upd" press="onCountryMasterUpd">
                     <TileContent >
-                    <ImageContent src="./images/countryMasterUpload.png"></ImageContent>
+                    <core:Icon class="icon" src="sap-icon://BusinessSuiteInAppSymbols/icon-source" />
                     </TileContent>
                 </GenericTile>
                 
                 <GenericTile id="GenGenericTile19" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
                     header="API URL" press="onApiurl">
                     <TileContent >
-                    <ImageContent src="./images/apiURL.png"></ImageContent>
+                     <core:Icon class="icon" src="sap-icon://SAP-icons-TNT/api" />
                     </TileContent>
                 </GenericTile>
 
